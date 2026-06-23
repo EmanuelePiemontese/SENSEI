@@ -3,3 +3,5 @@ pm4py
 tqdm
 numpy
 ijson
+transformers
+torch
