@@ -103,7 +103,3 @@ Execute the temporal split and tensor preparation for NAP and OP tasks:
 python "2_Pre_processing/Pre_processing_test.py"
 
 ```
-
-```
-
-```
