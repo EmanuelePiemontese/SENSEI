@@ -1,3 +1,5 @@
 pandas
 pm4py
 tqdm
+numpy
+ijson

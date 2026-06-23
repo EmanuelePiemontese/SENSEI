@@ -5,7 +5,7 @@ import pandas as pd
 # Get the directory of the current script
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 # Construct the base path to the raw data directory
-BASE_PATH_RAW = os.path.join(SCRIPT_DIR, "..", "data", "Dataset_Fine_tuning_Test")
+BASE_PATH_RAW = os.path.join(SCRIPT_DIR, "..", "data", "Dataset_Test")
 # The absolute path to the base directory containing the CSV files
 BASE_PATH = os.path.abspath(BASE_PATH_RAW)
 

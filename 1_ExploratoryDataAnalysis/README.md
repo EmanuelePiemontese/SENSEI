@@ -22,9 +22,9 @@ This script focuses on processing raw event logs in `.xes` format intended for t
 
 * **input path:** reads files from `../data/Dataset_Pre_training`
 * **features:** * leverages multi-core processing (`ProcessPoolExecutor`) for parallel parsing of heavy XES structures.
-* **automatically categorizes logs into specific groups (e.g., `log synthetic PLG`, `logs_berti`, `logs_complex_ws`, etc.) based on strict directory matching.
-* **computes standard process mining metrics:** Traces, Activities, Events, Variants, and Min/Median/Max trace lengths.
-* **evaluates the Paretto Principle:** checks if the unique variants count is less than 5% of the total traces.
+    * **automatically categorizes logs into specific groups (e.g., `log synthetic PLG`, `logs_berti`, `logs_complex_ws`, etc.) based on strict directory matching.
+    * **computes standard process mining metrics:** Traces, Activities, Events, Variants, and Min/Median/Max trace lengths.
+    * **evaluates the Paretto Principle:** checks if the unique variants count is less than 5% of the total traces.
 
 * **output:** saves comprehensive summary tables for each category as CSV files inside `../results/EDA_Synthetic/`.
 
