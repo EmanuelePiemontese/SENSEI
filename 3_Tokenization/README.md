@@ -50,5 +50,3 @@ python "3_Tokenization/Abstract_Symbol_Mapping_Tokenization.py"
 ```
 
 Upon successful execution, you will see a console output detailing the vocabulary size and the results of the tokenization integrity test. You can then inspect the `model/` directory to verify the saved artifacts.
-
-```
