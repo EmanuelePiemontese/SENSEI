@@ -1,0 +1,20 @@
+# Virtual Environment
+venv_SENSEI/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Data and Outputs (Ignore raw datasets and generated CSVs)
+data/
+*.csv
+*.xes
+
+# IDEs and System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
