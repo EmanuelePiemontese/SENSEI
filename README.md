@@ -1,9 +1,30 @@
-                            ███████╗███████╗███╗   ██╗███████╗███████╗██╗
-                            ██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝██║
-                            ███████╗█████╗  ██╔██╗ ██║███████╗█████╗  ██║
-                            ╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  ██║
-                            ███████║███████╗██║ ╚████║███████║███████╗██║
-                            ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝
+<table align = "center" style = "border-width: 0px; border-style: none; border-collapse: collapse;">
+  <tr style = "border-width: 0px; border-style: none;">
+    <td width = "280" align = "center" valign = "middle" style = "border-width: 0px; border-style: none; padding: 20px;">
+      <img src = "images/sensei_icon.png" alt = "SENSEI Logo" width = "240" style = "border-radius: 24px;"/>
+    </td>
+    <td valign = "middle" style = "border-width: 0px; border-style: none; padding-left: 30px;">
+      <pre align = "left" style = "color: #00BFFF; font-weight: bold;">
+███████╗███████╗███╗   ██╗███████╗███████╗██╗
+██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝██║
+███████╗█████╗  ██╔██╗ ██║███████╗█████╗  ██║
+╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  ██║
+███████║███████╗██║ ╚████║███████║███████╗██║
+╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝</pre>
+      <p align = "left">
+        <b>activity Sequence ENcoder through maSkEd activIty structure modeling</b><br>
+        A Next-Generation Process Mining Language Model
+      </p>
+      <p align = "left">
+        <a href = "https://www.python.org/"><img src = "https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white" alt = "Python"/></a>
+        <a href = "https://pytorch.org/"><img src = "https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt = "PyTorch"/></a>
+        <a href = "https://huggingface.co/transformers/"><img src = "https://img.shields.io/badge/%F0%9F%A4%97_Transformers-FFD21E.svg?style=for-the-badge&logoColor=black" alt = "Transformers"/></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
 
 ## Setup Instructions
 
@@ -23,14 +44,12 @@ Initialize the virtual environment from the root directory of the project:
 
 ```bash
 python -m venv venv_SENSEI
-
 ```
 
 **On macOS / Linux:**
 
 ```bash
 python3 -m venv venv_SENSEI
-
 ```
 
 ### 3. Activate the Virtual Environment
@@ -41,21 +60,18 @@ Before running scripts or installing packages, you must activate the environment
 
 ```cmd
 venv_SENSEI\Scripts\activate.bat
-
 ```
 
 **On Windows (PowerShell):**
 
 ```powershell
 venv_SENSEI\Scripts\Activate.ps1
-
 ```
 
 **On macOS / Linux:**
 
 ```bash
 source venv_SENSEI/bin/activate
-
 ```
 
 Once activated, your terminal prompt will show `(venv_SENSEI)`.
@@ -66,7 +82,6 @@ Install all the required external libraries using the provided `requirements.txt
 
 ```bash
 pip install -r "requirements.txt"
-
 ```
 
 ### 5. Deactivation
@@ -75,5 +90,4 @@ When you are done working on the project, you can exit the virtual environment b
 
 ```bash
 deactivate
-
 ```
