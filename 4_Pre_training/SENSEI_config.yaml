@@ -1,0 +1,27 @@
+
+paths:
+  processed_dataset: "results/Pre_processing_pre_training/processed_pretraining_dataset_prefixes.jsonl.gz"
+  tokenizer_dir: "model/tokenizer_abstract_symbol_mapping"
+  output_dir: "model/SENSEI_pre_trained"
+  checkpoint_path: "model/checkpoints"
+
+model:
+  type: "scratch"
+  max_len: 256
+  hidden_size: 512
+  num_hidden_layers: 4
+  num_attention_heads: 8
+  intermediate_size: 2048
+
+training:
+  seed: 42
+  batch_size: 1024        
+  num_workers: 16       
+  learning_rate: 5.0e-5
+  epochs: 50
+  patience: 5
+  warmup_steps: 1000
+  mlm_probability: 0.15
+  weight_decay: 0.01
+  use_amp: true           
+  compile_model: false     

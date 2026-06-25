@@ -12,6 +12,8 @@ __pycache__/
 data/
 *.csv
 *.xes
+# NumPy binary matrices (Tokenized datasets)
+*.npy
 
 # IDEs and System files
 .vscode/

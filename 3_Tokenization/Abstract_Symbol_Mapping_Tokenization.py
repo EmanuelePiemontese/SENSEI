@@ -10,8 +10,8 @@ MODEL_DIR_RAW = os.path.join(SCRIPT_DIR, "..", "model")
 MODEL_DIR = os.path.abspath(MODEL_DIR_RAW)
 
 # File and directory paths
-VOCAB_FILE = os.path.join(MODEL_DIR, "vocab.txt")
 TOKENIZER_OUTPUT_DIR = os.path.join(MODEL_DIR, "tokenizer_abstract_symbol_mapping")
+VOCAB_FILE = os.path.join(TOKENIZER_OUTPUT_DIR, "vocab.txt")
 
 # !!! ATTENTION !!! 
 # 1. BASE PARAMETERS
