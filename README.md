@@ -1,28 +1,28 @@
-<table align = "center" border = "0" cellpadding = "0" cellspacing = "0" style = "border: none; border-collapse: collapse;">
-  <tr style = "border: none;">
-    <td width = "280" align = "center" valign = "middle" style = "border: none; padding: 20px;">
-      <img src = "images/sensei_icon.png" alt = "SENSEI Logo" width = "240" style = "border-radius: 24px;"/>
-    </td>
-    <td valign = "middle" style = "border: none; padding-left: 30px;">
-      <pre align = "left" style = "color: #00BFFF; font-weight: bold;">
+<p align = "center">
+  <img src = "images/sensei_icon.png" alt = "SENSEI Logo" width = "200" style = "border-radius: 24px;"/>
+</p>
+
+<p align = "center">
+<pre align="center">
 ███████╗███████╗███╗   ██╗███████╗███████╗██╗
 ██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝██║
 ███████╗█████╗  ██╔██╗ ██║███████╗█████╗  ██║
 ╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  ██║
 ███████║███████╗██║ ╚████║███████║███████╗██║
-╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝</pre>
-      <p align = "left" style = "white-space: nowrap;">
-        <b>activity Sequence ENcoder through maSkEd activIty structure modeling</b><br>
-        A Next-Generation Process Mining Language Model
-      </p>
-      <p align = "left">
-        <a href = "https://www.python.org/"><img src = "https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white" alt = "Python"/></a>
-        <a href = "https://pytorch.org/"><img src = "https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt = "PyTorch"/></a>
-        <a href = "https://huggingface.co/transformers/"><img src = "https://img.shields.io/badge/%F0%9F%A4%97_Transformers-FFD21E.svg?style=for-the-badge&logoColor=black" alt = "Transformers"/></a>
-      </p>
-    </td>
-  </tr>
-</table>
+╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝
+</pre>
+</p>
+
+<p align = "center">
+  <b>activity Sequence ENcoder through maSkEd activIty structure modeling</b><br>
+  <i>A Next-Generation Process Mining Language Model</i>
+</p>
+
+<p align = "center">
+  <a href = "https://www.python.org/"><img src = "https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white" alt = "Python"/></a>
+  <a href = "https://pytorch.org/"><img src = "https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt = "PyTorch"/></a>
+  <a href = "https://huggingface.co/transformers/"><img src = "https://img.shields.io/badge/%F0%9F%A4%97_Transformers-FFD21E.svg?style=for-the-badge&logoColor=black" alt = "Transformers"/></a>
+</p>
 
 ---
 
