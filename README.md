@@ -1,9 +1,9 @@
-<table align = "center" style = "border-width: 0px; border-style: none; border-collapse: collapse;">
-  <tr style = "border-width: 0px; border-style: none;">
-    <td width = "280" align = "center" valign = "middle" style = "border-width: 0px; border-style: none; padding: 20px;">
+<table align = "center" border = "0" cellpadding = "0" cellspacing = "0" style = "border: none; border-collapse: collapse;">
+  <tr style = "border: none;">
+    <td width = "280" align = "center" valign = "middle" style = "border: none; padding: 20px;">
       <img src = "images/sensei_icon.png" alt = "SENSEI Logo" width = "240" style = "border-radius: 24px;"/>
     </td>
-    <td valign = "middle" style = "border-width: 0px; border-style: none; padding-left: 30px;">
+    <td valign = "middle" style = "border: none; padding-left: 30px;">
       <pre align = "left" style = "color: #00BFFF; font-weight: bold;">
 ███████╗███████╗███╗   ██╗███████╗███████╗██╗
 ██╔════╝██╔════╝████╗  ██║██╔════╝██╔════╝██║
@@ -11,7 +11,7 @@
 ╚════██║██╔══╝  ██║╚██╗██║╚════██║██╔══╝  ██║
 ███████║███████╗██║ ╚████║███████║███████╗██║
 ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝</pre>
-      <p align = "left">
+      <p align = "left" style = "white-space: nowrap;">
         <b>activity Sequence ENcoder through maSkEd activIty structure modeling</b><br>
         A Next-Generation Process Mining Language Model
       </p>
