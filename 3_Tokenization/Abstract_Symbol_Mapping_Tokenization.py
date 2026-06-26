@@ -20,7 +20,7 @@ MAX_ACT = 994
 
 def create_and_test_tokenizer():
     # Ensure the model directory exists
-    os.makedirs(MODEL_DIR, exist_ok = True)
+    os.makedirs(TOKENIZER_OUTPUT_DIR, exist_ok = True)
 
     # 2. VOCABULARY FILE CREATION
     # Special Tokens Definition:

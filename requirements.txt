@@ -5,3 +5,4 @@ numpy
 ijson
 transformers
 torch
+scikit-learn
