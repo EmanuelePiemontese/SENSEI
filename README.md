@@ -33,7 +33,7 @@ This project requires Python 3.8+ and uses a virtual environment named `venv_SEN
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/EmanuelePiemontese/SENSEI.git
-cd "SENSEI"
+cd SENSEI
 ```
 
 ### 2. Create the Virtual Environment
