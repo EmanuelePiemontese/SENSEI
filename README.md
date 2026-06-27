@@ -32,7 +32,7 @@ This project requires Python 3.8+ and uses a virtual environment named `venv_SEN
 
 ### 1. Clone the Repository
 ```bash
-git clone "[https://github.com/EmanuelePiemontese/SENSEI.git](https://github.com/EmanuelePiemontese/SENSEI.git)"
+git clone https://github.com/EmanuelePiemontese/SENSEI.git
 cd "SENSEI"
 ```
 
