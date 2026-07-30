@@ -6,3 +6,8 @@ ijson
 transformers
 torch
 scikit-learn
+scipy
+scikit-posthocs
+matplotlib
+openpyxl
+aeon

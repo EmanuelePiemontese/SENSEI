@@ -53,6 +53,9 @@ def create_and_test_tokenizer():
     # 3. LOAD AND CONFIGURE TOKENIZER
     # We set do_lower_case to False because our ACT_XXX tokens are uppercase
     tokenizer = BertTokenizerFast(vocab_file = VOCAB_FILE, do_lower_case = False)
+    
+    # Configure left-side truncation
+    tokenizer.truncation_side = "left"
 
     # We add the tokens as indivisible atoms 
     # (this prevents the tokenizer from splitting the tokens due to the presence of "_")
