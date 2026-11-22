@@ -1,70 +1,48 @@
 # 5. Fine-tuning
 
-This directory contains the core evaluation and fine-tuning scripts for the SENSEI model. After the model has internalized the syntax and control-flow dynamics of event logs during pre-training, this phase adapts those foundational weights to solve specific, high-value Process Mining predictive tasks. 
+# `fine_tunining_sensei.py`
 
-The scripts evaluate SENSEI against traditional baselines (e.g., standard Google BERT) across multiple datasets, ensuring rigorous benchmarking.
+Training and evaluation script for the **scratch vs. pretrained** comparison on Next Activity Prediction (NAP) with SENSEI encoder, using training expressed in **epochs** with early stopping.
 
-## Directory Structure
+It consumes the pickles produced by `prepare_nap_fractions.py` and appends one result row per `(log, fraction, seed, mode)` to a CSV file.
 
-```text
-5_Fine_tuning/
-├── Test_NAP.py
-├── Test_OP.py
-└── README.md
+## Modes
 
+| Mode | Encoder init | Encoder trainable | `lr_enc` | `lr_head` |
+|---|---|---|---|---|
+| `scratch` | random (same architecture/config as checkpoint) | yes | 1e-4 | 1e-4 |
+| `finetune` | pretrained checkpoint | yes | 1e-5 | 1e-3 |
+| `frozen` | pretrained checkpoint | no (only the head is trained) | - | 1e-3 |
+| `frozen_random` | random | no (only the head is trained) | - | 1e-3 |
 
-```
+`frozen_random` is a control: it measures how much a linear head can get from random features. In frozen modes the encoder is kept in `eval()` mode (no dropout).
 
----
+The hyperparameter grids in `MODES` currently contain a single value each; add values to the lists to enable real tuning.
 
-## Components Overview
+## Training protocol
 
-### `Test_NAP.py`
+- **Train/validation split** by **case** (`GroupShuffleSplit`, `--val_ratio`, seeded), so prefixes of the same case never appear in both sets.
+- **Optimizer**: AdamW with separate learning rates for encoder and head; no weight decay on biases and LayerNorm weights.
+- **Scheduler**: linear warmup (`--warmup_ratio` of total steps) then linear decay.
+- **Gradient clipping** at norm 1.0.
+- **Epoch-based loop**: up to `--epochs` full passes over the training set, with a validation loss computed at the end of every epoch.
+- **Early stopping**: stops after `--patience` consecutive epochs without validation-loss improvement. The best-epoch weights are kept in memory.
+- **Test**: evaluated with the best checkpoint, selected **only on validation loss**.
+- **Micro-batching** (`--micro_bs`): splits each batch into smaller chunks to save VRAM. The loss is `sum / batch_n`, so the gradient is identical to the full-batch mean.
 
-The script dedicated to the Next Activity Prediction benchmark.
+## Requirements
 
-* **objective:** predict the exact next event in an ongoing process trace.
-* **mechanism:** formulated as a multi-class classification problem. The script dynamically extracts the full vocabulary of possible next activities from the dataset, fine-tunes the model using Mean Pooling over token embeddings, and calculates Accuracy and F1-Macro scores.
+- Python 3.8+
+- `torch`, `transformers`, `scikit-learn`, `numpy`
+- A pretrained SENSEI checkpoint
+- A tokenizer directory (default `tokenizer`) whose vocabulary is extended with the activity codes of each subset
+- Pickles from `prepare_nap_fractions.py`
 
-### `Test_OP.py`
+A GPU is used automatically if available.
 
-The script dedicated to the Outcome Prediction benchmark.
-
-* **objective:** predict the final disposition of a running case (e.g., Deviant vs. Regular behavior).
-* **mechanism:** formulated as a binary classification problem. It leverages stratified splitting to handle class imbalances and calculates the robust ROC-AUC score alongside Accuracy and F1-Macro.
-
----
-
-## Execution Workflow
-
-Ensure your virtual environment is active and all previous phases (Pre-processing, Tokenization, and Pre-training) have been successfully completed. All commands should be executed from the root directory of the project.
-
-### Step 1: Run Next Activity Prediction
-
-Launch the script to fine-tune the model and evaluate it on the NAP task across all processed datasets.
-
-```bash
-python "5_Fine_tuning/Test_NAP.py"
-
-
-```
-
-### Step 2: Run Outcome Prediction
-
-Launch the script to fine-tune the model and evaluate it on the OP task.
+## Usage
 
 ```bash
-python "5_Fine_tuning/Test_OP.py"
-
-
+# All modes, all pickles in the directory
+python train_nap_fractions.py --pickle_dir path/to/pkl
 ```
-
----
-
-## Generated Artifacts
-
-Upon successful execution, the scripts will dynamically generate the required output folders and populate the root `model/` and `results/` directories:
-
-* `../model/checkpoints_NAP/` & `../model/checkpoints_OP/`: contains intermediate safety checkpoints saved whenever the validation loss improves.
-* `../model/SENSEI_fine_tuned_NAP/` & `../model/SENSEI_fine_tuned_OP/`: the final, complete model directories containing the `.pt` state dictionaries, `config.json`, and Tokenizer files ready for deployment.
-* `../results/Fine_tuning_benchmark/`: contains the final `risultati_nap_benchmark.csv` and `risultati_op_benchmark.csv` evaluation reports.
