@@ -16,11 +16,10 @@ OUTPUT_DIR = os.path.abspath(OUTPUT_DIR_RAW)
 
 # Exact list of files intended for Fine-Tuning (Test)
 TARGET_FILES = [
-    "BPIC11_f1.csv", "BPIC11_f2.csv", "BPIC11_f3.csv", "BPIC11_f4.csv",
     "BPIC15_1_f2.csv", "BPIC15_2_f2.csv", "BPIC15_3_f2.csv", "BPIC15_4_f2.csv", "BPIC15_5_f2.csv",
-    "BPIC17_O_Accepted.csv", "BPIC17_O_Cancelled.csv", "BPIC17_O_Refused.csv",
+    "BPIC17_O_Accepted.csv",
     "Production.csv",
-    "bpic2012_O_ACCEPTED-COMPLETE.csv", "bpic2012_O_CANCELLED-COMPLETE.csv", "bpic2012_O_DECLINED-COMPLETE.csv",
+    "bpic2012_O_ACCEPTED-COMPLETE.csv",
     "hospital_billing_2.csv", "hospital_billing_3.csv",
     "sepsis_cases_1.csv", "sepsis_cases_2.csv", "sepsis_cases_4.csv",
     "traffic_fines_1.csv"
